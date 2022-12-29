@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get", "post", "put"],
+      "route": "proxy/{p1:regex(.*)?}/{p2:regex(.*)?}/{p3:regex(.*)?}/{p4:regex(.*)?}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ],
+  "scriptFile": "../dist/CrossOriginResourceProxy/index.js"
+}
